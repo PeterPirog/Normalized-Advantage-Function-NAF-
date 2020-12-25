@@ -1,4 +1,3 @@
-#1ed2c67731159621d3caad4917cee0c5e21b3c2f
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -17,7 +16,10 @@ import copy
 from torch.distributions import MultivariateNormal, Normal
 import argparse
 import wandb
+import os
 
+os.environ["WANDB_API_KEY"] = '1ed2c67731159621d3caad4917cee0c5e21b3c2f'
+#os.environ["WANDB_MODE"] = "dryrun"
 
 class DeepNAF(nn.Module):
     def __init__(self, state_size, action_size,layer_size, seed):
